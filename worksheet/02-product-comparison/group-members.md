@@ -17,27 +17,27 @@ File này khai báo 2 thành viên trong nhóm + phân công thực hiện.
 
 | # | Mã học viên | Họ tên đầy đủ | Phân công chính |
 |---|---|---|---|
-| 1 | A20-XXXXX | [...] | [...] |
-| 2 | A20-XXXXX | [...] | [...] |
+| 1 | 2A202600285 | Quách Ngọc Quang | Test Sản phẩm A (Cursor), phân tích S1-S3 |
+| 2 | A20-XXXXX | [Tên đồng đội] | Test Sản phẩm B (Copilot), phân tích S4-S5 |
 
 ---
 
 ## Nhiệm vụ thử nghiệm chung
 
-[Mô tả 1-2 câu nhiệm vụ chung mà cả 2 thành viên cùng test trên 2 sản phẩm. Ví dụ: "Viết bản tóm tắt 200 từ về tác động của AI lên ngành ed-tech, có dẫn nguồn."]
+Nhiệm vụ chung: "Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi, có kèm unit test và giải thích chi tiết phần xử lý edge cases."
 
-**Ngành chọn**: [A — Tìm kiếm / B — Lập trình / C — Viết lách / D — Nghiên cứu]
+**Ngành chọn**: [B — Lập trình]
 
-**Sản phẩm A**: [tên + URL]
+**Sản phẩm A**: Cursor (https://www.cursor.com)
 
-**Sản phẩm B**: [tên + URL]
+**Sản phẩm B**: GitHub Copilot (https://github.com/features/copilot)
 
 ---
 
 ## Phân chia screenshot
 
-- Sản phẩm A → [Mã học viên nào phụ trách chụp]
-- Sản phẩm B → [Mã học viên nào phụ trách chụp]
+- Sản phẩm A (Cursor) → Quách Ngọc Quang
+- Sản phẩm B (Copilot) → [Tên đồng đội]
 
 ---
 
