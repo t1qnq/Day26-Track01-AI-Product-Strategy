@@ -29,50 +29,50 @@ Quy tắc khi viết:
 
 ---
 
-## Phần 1 — Nhóm đã quan sát (≥ 2 nhóm khác)
+## Phần 1 — Thành viên đã quan sát (≥ 2 thành viên khác)
 
-| # | Tên nhóm / mã 2 học viên | Ngành | 2 sản phẩm họ test |
+| # | Mã học viên / Tên | Case BigTech | Sản phẩm họ phân tích |
 |---|---|---|---|
-| 1 | 2A202600392 (Lab 1 cá nhân) | N/A | Case study: Fiverr bị AI disruption |
-| 2 | Nhóm khác (chưa ghi nhận) | — | — |
+| 1 | 2A202600369 Hồ Thị Tố Nhi | Adobe bị AI disruption | Midjourney / Stable Diffusion |
+| 2 | 2A202600392 — Nguyễn Đông Hưng | Fiverr bị AI disruption | ChatGPT / GitHub Copilot / Cursor |
 
 ---
 
-## Phần 2 — Điều thấy hay từ nhóm khác
+## Phần 2 — Điều thấy hay từ thành viên khác
 
-**Quan sát 1** (từ Lab 1 Fiverr case của đồng đội Nguyễn Đông Hưng):
+**Quan sát 1** (từ 2A202600369 - Hồ Thị Tố Nhi ,Adobe case):
 
-- **Cụ thể họ đưa ra**: Phân tích timeline chi tiết từ ChatGPT ra mắt (30/11/2022) đến khi Fiverr phải cắt 30% nhân sự (09/2025), với 16 sources đã kiểm chứng. Đặc biệt có bảng số liệu so sánh trước/sau AI shock với active buyers giảm từ 4.217M → 2.907M.
-- **Vì sao tôi thấy hay**: Cách vận dụng Lens 1 rất cụ thể — không chỉ nói "AI ảnh hưởng" mà chỉ rõ 3 shifts nào xảy ra (Shift 1: Do the work for me, Shift 5: Expect it now, Shift 4: Pay for output), và mỗi shift đều có bằng chứng số liệu đi kèm. Phần so sánh với Upwork (đối thủ phản ứng tốt hơn) cho thấy góc nhìn đa chiều.
+- **Cụ thể họ đưa ra**: Phân tích chi tiết về việc Adobe Creative revenue growth plummet từ +23% YoY (FY2021) xuống +10% YoY (FY2022-2024), kèm theo market cap collapse -63.7% từ $320B (Nov 2021) xuống $99.5B (May 2026). Có bằng chứng cụ thể về 4 fits bị vỡ: PMF, MMF, PCM, PCF.
+- **Vì sao tôi thấy hay**: Cách phân tích "switching cost moat bị AI phá vỡ" rất thuyết phục — khi prompts thay thế pixel-level editing, hours users spent mastering Photoshop không còn lock them in. Có so sánh đối chiếu với Canva (phản ứng nhanh hơn với AI APIs + freemium model).
 
-**Quan sát 2** (từ nhóm Lab 2 Cursor vs Copilot của Quách Ngọc Quang & Nguyễn Đông Hưng):
+**Quan sát 2** (từ 2A202600392 - Nguyễn Đông Hưng, Fiverr case):
 
-- **Cụ thể họ đưa ra**: Framework S1-S5 mở rộng 8 mục con, đặc biệt phần S5.4 Moat Analysis đánh giá 5 loại moat (data/network/switching cost/brand/distribution) riêng cho từng sản phẩm. S5.7 Spark→Loop→System có dự báo 12 tháng tới rất cụ thể.
-- **Vì sao tôi thấy hay**: Phân tích moat rất thực tế — không chỉ liệt kê mà còn chỉ ra moat nào "dễ bị copy" (Cursor's UX moat) vs moat nào "bền vững hơn" (Copilot's distribution moat trên GitHub ecosystem).
-
----
-
-## Phần 3 — Điểm yếu / chỗ chưa thuyết phục
-
-**Điểm yếu 1** (từ Lab 1 Fiverr case của đồng đội):
-
-- **Cụ thể**: Phần S5.5 Data Flywheel chỉ mô tả "có một phần compounding" nhưng chưa phân tích sâu tại sao Fiverr's flywheel yếu hơn so với ChatGPT's flywheel.
-- **Bằng chứng gì còn thiếu**: So sánh cụ thể về loại dữ liệu mà mỗi platform thu thập — Fiverr thu thập transaction data (order, review) trong khi ChatGPT thu thập interaction data (prompt, edit, accept/reject) — loại nào valuable hơn cho model improvement?
-- **Tôi sẽ đề xuất họ làm thêm**: Vẽ diagram data flow cho cả 2 platforms để thấy rõ hơn sự khác biệt trong feedback loop.
-
-**Điểm yếu 2** (từ Lab 2 Cursor vs Copilot của nhóm):
-
-- **Cụ thể**: Phần S5.2 User Base có ghi "~720,000 paying users (ước tính)" cho Cursor nhưng nguồn chỉ ghi "Sacra" — không có link trực tiếp.
-- **Bằng chứng gì còn thiếu**: Link URL cụ thể đến bài báo Sacra, và nên có thêm nguồn thứ 2 để corroborate con số này.
-- **Tôi sẽ đề xuất họ làm thêm**: Thêm trích dẫn full URL trong slide deck credits, hoặc ít nhất ghi rõ ngày xuất bản bài báo Sacra để verify.
+- **Cụ thể họ đưa ra**: Timeline chi tiết từ ChatGPT ra mắt (30/11/2022) đến Fiverr cuts 30% staff (09/2025), với 16 sources đã kiểm chứng. Có bảng số liệu so sánh trước/sau: active buyers giảm từ 4.217M → 2.907M, marketplace revenue giảm 13.6% YoY Q1 2026.
+- **Vì sao tôi thấy hay**: Phân tích "4 Fit Collapse" rất cụ thể — không chỉ nói "AI ảnh hưởng" mà chỉ rõ Product Market Fit, Model Market Fit, Product Channel Fit, Channel Model Fit nào bị phá vỡ. Có phần so sánh với Upwork (phản ứng tốt hơn với Uma AI từ 04/2024, FY2024 record revenue $769.3M).
 
 ---
 
-## Phần 4 — Câu hỏi đặt cho nhóm khác
+## Phần 3 — Điểm yếu / chỗ chưa thuyết phục (Thành viên chấm Thành viên)
 
-- **Cho Lab 1 Fiverr case** (đồng đội Hưng): Nếu Fiverr phản ứng sớm hơn 6 tháng (ra AI workspace ngay giữa 2023 thay vì đầu 2025), liệu họ có giữ được marketplace momentum không? Hay cái chết của micro-gigs là không thể tránh?
+**Điểm yếu 1** (từ 2A202600369 - Hồ Thị Tố Nhi, Adobe case):
 
-- **Cho Lab 2 Cursor vs Copilot** (nhóm mình): Trong S5.7 dự báo Cursor sẽ chuyển sang "System" stage với Background Agents — nhưng nếu Microsoft tích hợp tương tự vào Copilot Workspace, Cursor có bị commoditize không? Moat nào của Cursor là thực sự defendable?
+- **Cụ thể**: Phần phân tích Data Flywheel chỉ mô tả "có một phần compounding effect" nhưng chưa phân tích sâu tại sao Adobe's flywheel yếu hơn so với Midjourney/ChatGPT. Không có so sánh định lượng về velocity của feedback loop.
+- **Bằng chứng gì còn thiếu**: So sánh cụ thể về loại dữ liệu mà mỗi platform thu thập — Adobe thu thập creative workflow data (project files, edits) trong khi Midjourney thu thập prompt-response pairs — loại nào valuable hơn cho model improvement? Không có số liệu về user retention rate hoặc engagement metrics sau khi dùng Firefly.
+- **Tôi sẽ đề xuất họ làm thêm**: Vẽ diagram data flow cho cả 2 platforms để thấy rõ hơn sự khác biệt trong feedback loop. Thêm bảng so sánh định lượng: dữ liệu thu thập, frequency, và value cho model training.
+
+**Điểm yếu 2** (từ 2A202600392 - Nguyễn Đông Hưng, Fiverr case):
+
+- **Cụ thể**: Phần S5.4 Moat Strategy có ghi "Brand — Mạnh" nhưng không có bằng chứng định lượng về brand strength (NPS, brand recall survey, hoặc share of search).
+- **Bằng chứng gì còn thiếu**: Link URL cụ thể đến survey/third-party brand ranking, và nên có thêm source thứ 2 để corroborate claim "Fiverr là brand quen thuộc của freelance gigs". Không có so sánh brand strength với Upwork.
+- **Tôi sẽ đề xuất họ làm thêm**: Thêm trích dẫn full URL từ Interbrand/BrandZ brand ranking, hoặc ít nhất ghi rõ source từ Google Trends share of search comparison Fiverr vs Upwork.
+
+---
+
+## Phần 4 — Câu hỏi đặt cho thành viên khác
+
+- **Cho 2A202600369 - Hồ Thị Tố Nhi (Adobe case)**: Nếu Adobe ra Firefly sớm hơn 8 tháng (ngay khi Midjourney public beta ra mắt), liệu họ có giữ được Creative growth momentum không? Hay việc bundling vào subscription flat-rate là mistake không thể sửa?
+
+- **Cho 2A202600392 - Nguyễn Đông Hưng (Fiverr case)**: Trong phần 6 so sánh Fiverr vs Upwork, bạn nói Upwork phản ứng tốt hơn vì ra Uma AI từ 04/2024 — nhưng Upwork's core business (enterprise freelance) khác Fiverr's core (micro-gigs). Liệu đây có phải fair comparison không? Fiverr nên so sánh với đối thủ nào thì hợp lý hơn?
 
 ---
 
@@ -85,22 +85,22 @@ Quy tắc khi viết:
 
 **Bài học 2**:
 
-- **Tôi sẽ làm khác lần sau**: Khi làm moat analysis, không chỉ liệt kê 5 loại moat mà phải ranking từng moat theo strength (Strong/Medium/Weak) và chỉ ra moat nào đang bị tấn công trực tiếp bởi AI.
+- **Tôi sẽ làm khác lần sau**: Khi làm moat analysis, không chỉ liệt kê 5 loại moat mà phải ranking từng moat theo strength (Strong/Medium/Weak) và chỉ ra moat nào đang bị tấn công trực tiếp bởi AI. Có bằng chứng định lượng (survey, ranking, trend data).
 - **Lý do**: Mô hình 5 moat types là useful framework nhưng cần quantifiable assessment mới có actionable insights.
 
 **Bài học 3**:
 
-- **Tôi sẽ làm khác lần sau**: Luôn có phần so sánh với "đối thủ phản ứng tốt hơn" (như Upwork vs Fiverr) để show contrast — điều này làm bài phân tích có chiều sâu hơn là chỉ mô tả 1 chiều.
+- **Tôi sẽ làm khác lần sau**: Luôn có phần so sánh với "đối thủ phản ứng tốt hơn" (như Upwork vs Fiverr, Canva vs Adobe) để show contrast — điều này làm bài phân tích có chiều sâu hơn là chỉ mô tả 1 chiều.
 - **Lý do**: So sánh đối chiếu giúp làm rõ hơn tại sao 1 company phản ứng tốt hơn company khác — bài học kinh nghiệm cho sản phẩm mình đang phân tích.
 
 ---
 
 ## Checklist trước khi nộp
 
-- [x] Phần 1 ghi rõ ≥ 2 nhóm đã quan sát (mã 2 học viên + ngành + sản phẩm).
-- [x] Phần 2 có ≥ 2 quan sát hay, gắn với nhóm cụ thể.
+- [x] Phần 1 ghi rõ ≥ 2 thành viên đã quan sát (mã học viên + case + sản phẩm).
+- [x] Phần 2 có ≥ 2 quan sát hay, gắn với thành viên cụ thể.
 - [x] Phần 3 có ≥ 2 điểm yếu / câu hỏi chưa được trả lời.
-- [x] Phần 4 có ≥ 2 câu hỏi cụ thể cho nhóm khác.
+- [x] Phần 4 có ≥ 2 câu hỏi cụ thể cho thành viên khác.
 - [x] Phần 5 có ≥ 2 bài học rút ra, kèm lý do và cách áp dụng lần sau.
 
 ---
