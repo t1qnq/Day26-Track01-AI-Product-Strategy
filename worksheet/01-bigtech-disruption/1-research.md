@@ -2,184 +2,114 @@
 artifact: 1 — Tự nghiên cứu case
 bai-tap: 1 — Tìm 1 case bị ảnh hưởng bởi big tech AI (cá nhân)
 phase: Chọn case + tìm số liệu + nguồn
-time: 15 phút (xem deck slide 4 để biết khung giờ chính xác trong buổi)
+time: 15 phút
 input: prompts/01-research-case.md
 nop-cuoi: Không — file trung gian
 ---
 
-# 1 — Tự nghiên cứu: tìm 1 case bị big tech AI ảnh hưởng + số liệu thật
+# 1 — Tự nghiên cứu: Fiverr bị AI thay thế các task freelance đơn giản
 
-Mục tiêu: bạn tự chọn 1 sản phẩm hoặc 1 công ty bị ảnh hưởng nặng sau khi big tech AI (ChatGPT, Claude, Gemini, GitHub Copilot, Microsoft Copilot...) ra mắt tính năng tương tự. Tự tìm số liệu cụ thể về case đó từ nguồn công khai. Mỗi số liệu phải có nguồn (URL + tên báo/tổ chức + ngày tháng). Lab 1 là phần cá nhân — mỗi học viên tự chọn case riêng và tự làm phần research trong repo cá nhân.
+## Bước 0 — Chọn case
 
-Lý do làm bước này: phân tích chỉ có sức nặng khi đứng trên số liệu thật. Bạn cần tự tìm ít nhất 8-10 số liệu cụ thể để có nền tảng phản biện cho 4 câu hỏi ở phase 2.
-
-Quy tắc: **không có số liệu = không có nhận định**. Học viên tự tìm số liệu cho case mình chọn. Mỗi nhận định phải có nguồn (URL + ngày).
-
-## Bước 0 — Chọn case (5 phút đầu)
-
-Trước khi tìm số liệu, bạn quyết định case nào:
-
-1. Sản phẩm/công ty bạn chọn là gì?
-2. Big tech AI nào ra tính năng tương tự gây ảnh hưởng? (ChatGPT, Claude, Gemini, GitHub Copilot, Microsoft Copilot...)
-3. Vì sao bạn chọn case này? (Có số liệu công khai? Có mốc thời gian rõ? Có liên hệ với ngành bạn quan tâm?)
-
-Ghi câu trả lời ngắn vào ô dưới đây trước khi bắt đầu tìm số liệu.
-
-- **Tên case**: [...]
-- **Big tech AI tạo áp lực**: [...]
-- **Lý do chọn**: [...]
-
-## Quy trình 15 phút
-
-```text
-5 phút  — Chọn case + xác định 4 nhóm số liệu cần tìm cho case của mình
-8 phút  — Tự tìm số liệu trên các nguồn chính (báo chí công nghệ, báo cáo tài chính, blog chính thức...)
-2 phút  — Rà lại bảng số liệu, đánh dấu số chưa kiểm chứng
-```
+- **Tên case**: Fiverr — marketplace cho dịch vụ freelance dạng gig.
+- **Big tech AI tạo áp lực**: ChatGPT/OpenAI và các AI coding/writing/design assistant phổ thông.
+- **Lý do chọn**: Fiverr từng mạnh ở các task digital nhỏ như viết nội dung, chỉnh sửa văn bản, dịch, logo, ảnh, code snippet. Sau ChatGPT, nhiều task đơn giản có thể được buyer tự làm bằng AI miễn phí hoặc gói $20/tháng, làm giảm nhu cầu thuê từng gig nhỏ. Fiverr không sụp đổ ngay, nhưng số active buyers và marketplace revenue cho thấy phần marketplace lõi bị ép, trong khi công ty phải chuyển sang dịch vụ AI, Pro/upmarket và công cụ AI nội bộ.
 
 ---
 
 ## Phần A — Các nhóm số liệu cần tìm
 
-Bạn tự tìm đủ 4 nhóm số liệu dưới đây cho case mình chọn. Tên nhóm giữ nguyên — nội dung cụ thể bạn tự điền theo case.
+### Nhóm 1 — Quy mô trước & sau
 
-### Nhóm 1 — Quy mô trước & sau (cổ phiếu, doanh thu, người dùng)
+Trước AI shock, Fiverr tăng trưởng rất nhanh nhờ COVID/remote work. Năm 2021, công ty có 4.217 triệu active buyers và doanh thu $297.7 triệu. Sau khi ChatGPT phổ biến, active buyers giảm liên tục: 3.630 triệu cuối 2024, 3.297 triệu Q3 2025, và 2.907 triệu Q1 2026.
 
-Tuỳ case, chọn các chỉ số phù hợp:
-
-- Cổ phiếu / vốn hoá: đỉnh cao + hiện tại (nếu là công ty niêm yết).
-- Doanh thu: trước khi big tech AI ra tính năng + sau đó (so sánh quý / năm).
-- Người dùng trả tiền / hoạt động: đỉnh + hiện tại.
-- Tỷ lệ giảm tổng cộng (%).
-
-Nguồn nên dùng:
-
-- Yahoo Finance, MacroTrends, Google Finance — cho công ty niêm yết.
-- Báo cáo quý / 10-K filing (Investor Relations của chính công ty).
-- Báo công nghệ: TechCrunch, CNBC, Bloomberg, Reuters, FT.
+Điểm quan trọng: tổng revenue không giảm mạnh vì Fiverr tăng spend per buyer và services revenue, nhưng marketplace lõi bị suy yếu. Đây là dấu hiệu disruption theo chiều "low-end/simple tasks bị tự động hoá", không phải công ty phá sản.
 
 ### Nhóm 2 — Mốc thời gian big tech AI ra tính năng tương tự
 
-Tìm:
+ChatGPT ra mắt công khai ngày 30/11/2022. Use case trùng với Fiverr gồm: viết copy/email/blog, dịch, tóm tắt, tạo ý tưởng, code nhỏ, tạo prompt, viết mô tả sản phẩm, outline nội dung và các task lặp lại.
 
-- Tính năng AI cụ thể của big tech (vd: ChatGPT, Gemini Code Assist, Copilot, …).
-- Ngày ra mắt + ngày mở rộng người dùng.
-- Tốc độ phổ cập của tính năng đó (số người dùng sau 6 tháng, 1 năm).
-- Mức độ trùng lặp với sản phẩm của case bạn chọn (tính năng nào trùng?).
+### Nhóm 3 — Phản ứng của Fiverr sau AI shock
 
-Nguồn nên dùng:
+Fiverr phản ứng theo 3 lớp:
 
-- Blog chính thức của big tech (OpenAI blog, Anthropic blog, Google blog, GitHub blog).
-- Báo công nghệ.
+1. Mở thêm AI categories khi nhu cầu search AI tăng.
+2. Dùng AI cho matching/hiring qua Dynamic Matching.
+3. Ra Fiverr Go để freelancer tạo AI Creation Model/Personal Assistant dựa trên portfolio của chính họ.
 
-### Nhóm 3 — Phản ứng của sản phẩm / công ty sau khi big tech AI ra mắt
-
-Tìm:
-
-- Sản phẩm AI / tính năng mới mà công ty đã ra: tên + ngày ra mắt.
-- Đối tác AI: dùng model nào dưới mui xe.
-- Thời gian từ khi big tech AI ra mắt đến khi công ty này có sản phẩm AI: ___ tháng.
-- Đợt sa thải / cắt giảm / tái cơ cấu (nếu có): số người + tỷ lệ + ngày.
-- Thông báo delisting / mua bán sáp nhập / đóng cửa (nếu có).
-
-Nguồn nên dùng:
-
-- Báo cáo quý của công ty.
-- Báo công nghệ và báo kinh doanh.
-- TechCrunch, Bloomberg, CNBC.
+Đến 2025, Fiverr còn chuyển thông điệp sang AI-first và cắt giảm nhân sự theo hướng leaner/faster.
 
 ### Nhóm 4 — Đối thủ AI thay thế
 
-Tìm:
+Đối thủ thay thế không chỉ là marketplace khác, mà là AI platform:
 
-- Big tech AI thay thế sản phẩm này ở use case cụ thể nào?
-- Có đối thủ startup khác cũng đang thay thế không (tên + ngày ra mắt + giá)?
-- So sánh giá: sản phẩm gốc vs big tech AI vs startup khác (giá/tháng).
-
-Nguồn nên dùng:
-
-- Trang giá chính thức của từng sản phẩm.
-- Báo công nghệ.
+- ChatGPT: thay thế nhiều task văn bản/coding đơn giản.
+- GitHub Copilot/Cursor: thay thế các micro-task code.
+- Midjourney/Canva/Adobe Firefly: thay thế một phần task thiết kế đơn giản.
+- Upwork phản ứng tốt hơn ở phía enterprise/work outcomes bằng Uma AI và managed services.
 
 ---
 
 ## Phần B — Bảng tổng hợp số liệu
 
-Sau khi tìm đủ 4 nhóm số liệu, bạn gộp vào bảng dưới đây. Mục tiêu: tối thiểu 8-10 số liệu có nguồn cụ thể.
-
-### Bảng số liệu case [tên case]
+### Bảng số liệu case Fiverr
 
 | # | Số liệu | Giá trị | Ngày / Thời kỳ | Nguồn (URL) | Đã kiểm chứng? |
 |---|---|---|---|---|---|
-| S-01 | Quy mô đỉnh (cổ phiếu / doanh thu / user) | | / / | | Có / Chưa |
-| S-02 | Quy mô hiện tại | | / / | | |
-| S-03 | Big tech AI ra tính năng tương tự — ngày | | / / | | |
-| S-04 | Sản phẩm AI của công ty ra mắt — ngày + tên | | / / | | |
-| S-05 | Khoảng cách thời gian (big tech AI → phản ứng) | ___ tháng | | | |
-| S-06 | Đợt sa thải / cắt giảm | ___% | / / | | |
-| S-07 | Doanh thu mới nhất (so YoY) | | | | |
-| S-08 | Đối thủ AI thay thế — tên + thời điểm | | / / | | |
-| S-09 | Giá sản phẩm gốc vs big tech AI | $___ vs $___ | | | |
-| S-10 | [Thêm dòng nếu tìm được số đặc biệt] | | | | |
-
-Bổ sung dòng nếu bạn tìm thêm số liệu nào liên quan.
+| S-01 | Active buyers trước AI shock | 4.217 triệu active buyers | 31/12/2021 | Fiverr Q4/FY2021 Results: https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2021-results/ | Có |
+| S-02 | Doanh thu trước AI shock | $297.7 triệu doanh thu năm 2021 | FY2021 | Fiverr 2021 Annual Report / 20-F: https://investors.fiverr.com/static-files/14cf06f3-6175-4921-828a-6665e123bb01 | Có |
+| S-03 | ChatGPT ra mắt công khai | 30/11/2022 | 30/11/2022 | OpenAI blog: https://openai.com/blog/chatgpt/ | Có |
+| S-04 | Fiverr mở AI categories vì search AI tăng | Searches for AI-related services increased over 1400% | 24/01/2023 | Fiverr press release: https://investors.fiverr.com/node/7271/pdf | Có |
+| S-05 | Active buyers sau AI shock | 3.630 triệu, giảm 10% YoY so với 4.027 triệu | 31/12/2024 | Fiverr Q4/FY2024 Results: https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results/ | Có |
+| S-06 | Marketplace revenue sau AI shock | $303.1 triệu năm 2024, giảm 1.3% YoY; total revenue vẫn tăng 8.3% | FY2024 | Fiverr Q4/FY2024 Results: https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results/ | Có |
+| S-07 | Services revenue tăng bù marketplace | $88.4 triệu năm 2024, tăng 62.5% YoY | FY2024 | Fiverr Q4/FY2024 Results: https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results/ | Có |
+| S-08 | Dynamic Matching dùng AI + human experts | Beta cho Pro users, full launch đầu 2025 | 13/12/2024 | Fiverr press release: https://www.fiverr.com/news/dynamic-matching | Có |
+| S-09 | Fiverr Go ra mắt | AI platform cho creators/customers, cho freelancer tạo AI counterpart | 19/02/2025 | Fiverr Go press release: https://www.fiverr.com/news/fiverr-go | Có |
+| S-10 | Fiverr Go pricing cho freelancer | AI Creation Model subscription $25/tháng | 2025 | Fiverr Help Center: https://help.fiverr.com/hc/en-us/articles/32545573840657-AI-Creation-Model-for-freelancers | Có |
+| S-11 | Active buyers tiếp tục giảm | 3.297 triệu Q3 2025, giảm 11.7% YoY | 30/09/2025 | Fiverr Q3 2025 Results: https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-third-quarter-2025-results | Có |
+| S-12 | Q1 2026 active buyers giảm mạnh hơn | 2.907 triệu Q1 2026, giảm 17.8% YoY; marketplace revenue $67.1 triệu, giảm 13.6% YoY | 31/03/2026 | Fiverr Q1 2026 shareholder PDF: https://investors.fiverr.com/static-files/31a69238-419a-4732-a849-f54fc9d4e4d3 | Có |
+| S-13 | Buyer fee làm gig nhỏ kém hấp dẫn hơn | Service fee 5.5%; đơn nhỏ có thêm small order fee | 2026 | Fiverr Help Center: https://help.fiverr.com/hc/en-us/articles/37554110679441-Managing-payments-and-billing | Có |
+| S-14 | Đối thủ phản ứng tốt hơn: Upwork Uma | Uma AI hỗ trợ matching, proposal drafts, managed services | 30/04/2024 và 16/10/2024 | Upwork Spring/Fall Updates: https://www.upwork.com/press/releases/upwork-introduces-upwork-updates-to-launch-ai-innovations-and-other-solutions-shaping-how-businesses-and-freelancers-hire-and-work / https://www.upwork.com/press/releases/upwork-updates-fall-2024-release | Có |
+| S-15 | Upwork record revenue | FY2024 revenue $769.3 triệu, record revenue | FY2024 | Upwork Q4/FY2024 Results: https://investors.upwork.com/node/11601/pdf | Có |
+| S-16 | Fiverr AI-first restructuring | Khoảng 250 nhân sự, khoảng 30% workforce, chuyển sang AI-first | 09/2025 | The Register: https://www.theregister.com/software/2025/09/16/fiverr-cuts-30-of-staff-in-pivot-to-ai-first/361857 | Có |
 
 ---
 
 ## Phần C — Kiểm chứng nguồn
 
-Trước khi chuyển sang phân tích, rà lại từng số liệu:
-
 ### Checklist kiểm chứng
 
-- [ ] Mỗi số liệu có URL nguồn cụ thể.
-- [ ] URL mở được, không 404.
-- [ ] Nội dung URL có khớp với số liệu mình ghi (ít nhất là cùng đơn vị, cùng năm).
-- [ ] Với số liệu quan trọng (quy mô, doanh thu, ngày tháng), kiểm chứng chéo 2 nguồn độc lập.
-- [ ] Nếu chưa chắc, đánh dấu `[CHƯA KIỂM CHỨNG]` thay vì xoá.
+- [x] Mỗi số liệu có URL nguồn cụ thể.
+- [x] URL mở được, không 404 tại thời điểm kiểm tra.
+- [x] Nội dung URL có khớp với số liệu ghi trong bảng.
+- [x] Số liệu quan trọng ưu tiên nguồn gốc: Fiverr investor relations, OpenAI blog, Fiverr Help Center, Upwork investor/press.
+- [x] Nguồn báo chỉ dùng cho sự kiện layoff/AI-first vì bài press chính thức khó trích trực tiếp.
 
 ### Quy tắc loại nguồn
 
-| Mức ưu tiên | Loại nguồn | Ví dụ |
+| Mức ưu tiên | Loại nguồn | Nguồn đã dùng |
 |---|---|---|
-| 1 — Nguồn gốc | Báo cáo tài chính, thông báo chính thức, hồ sơ pháp lý | 10-K filings, SEC filings, blog công ty |
-| 2 — Báo lớn | Báo chí công nghệ/kinh doanh uy tín | CNBC, Bloomberg, TechCrunch, Reuters, FT |
-| 3 — Báo cáo phân tích | Báo cáo tài chính độc lập | MacroTrends, Yahoo Finance, Google Finance |
-| 4 — Tránh dùng | Bài đăng cá nhân, blog không nguồn, mạng xã hội | Reddit posts, Medium articles không có citation |
-
-### Cảnh báo
-
-AI có thể bịa cả nguồn — đặc biệt khi bạn hỏi AI số liệu thay vì tự tìm. Nếu dùng AI để gợi ý nơi tìm, vẫn phải tự mở URL và xác minh.
+| 1 — Nguồn gốc | Báo cáo tài chính, blog chính thức, help center | Fiverr IR, OpenAI blog, Fiverr Help Center, Upwork IR |
+| 2 — Báo lớn | Báo chí công nghệ/kinh doanh | The Register |
+| 3 — Báo cáo phân tích | Ước tính thị trường | Không dùng cho số liệu cốt lõi |
+| 4 — Tránh dùng | Blog không nguồn, Reddit | Không dùng |
 
 ---
 
 ## Phần D — Phát hiện ban đầu
 
-Sau khi có số liệu, ghi nhanh 3-5 phát hiện đáng chú ý nhất. Đây chưa phải nhận định cuối — chỉ là quan sát.
-
-Ví dụ format (không phải case mẫu — bạn viết theo case mình chọn):
-
-- "Doanh thu của [case] giảm ___% trong 18 tháng kể từ khi big tech AI ra tính năng tương tự."
-- "[Case] mất ___ tháng mới ra sản phẩm AI phản ứng, trong khi đối thủ chỉ mất ___ tháng."
-- "Giá sản phẩm gốc là $___ / tháng, trong khi big tech AI tương ứng là $___ — chênh lệch lớn nhưng người dùng vẫn chuyển."
-
-Phát hiện của bạn:
-
-- [...]
-- [...]
-- [...]
-- [...]
-- [...]
+- Fiverr không bị "chết" sau ChatGPT, nhưng active buyers giảm từ 4.217 triệu cuối 2021 xuống 2.907 triệu Q1 2026, tức giảm khoảng 31%.
+- Năm 2024, total revenue của Fiverr vẫn tăng 8.3%, nhưng marketplace revenue giảm 1.3%; tăng trưởng đến từ services revenue tăng 62.5%.
+- Q1 2026 cho thấy áp lực rõ hơn: active buyers giảm 17.8% YoY và marketplace revenue giảm 13.6% YoY.
+- Chỉ 2 tháng sau ChatGPT, Fiverr đã phải mở AI categories vì searches for AI-related services tăng hơn 1400%, chứng tỏ demand của buyer đổi rất nhanh.
+- Fiverr Go ra mắt sau ChatGPT khoảng 27 tháng. Đây là phản ứng đúng hướng nhưng khá muộn so với tốc độ thay đổi kỳ vọng người dùng.
+- Upwork phản ứng theo hướng "AI + managed outcomes" sớm hơn, với Uma AI ra mắt tháng 4/2024, tập trung vào matching, proposal, scoping và managed services.
 
 ---
 
-## Phần E — Câu hỏi mở (cho phân tích Phần 2)
+## Phần E — Câu hỏi mở
 
-Trước khi chuyển sang `2-analysis.md`, bạn liệt kê các câu hỏi cần đào sâu:
-
-- Câu hỏi 1: [...]
-- Câu hỏi 2: [...]
-- Câu hỏi 3: [...]
-- Câu hỏi 4: [...]
-
-Sau bước này, chuyển sang `2-analysis.md` để vận dụng Lens 1 (Customer Expectations + Four Fits) vào case bạn chọn.
+- Câu hỏi 1: Fiverr mất active buyers vì AI thay thế task đơn giản hay vì post-COVID marketplace normalization?
+- Câu hỏi 2: Marketplace revenue giảm trong khi total revenue tăng có nghĩa là Fiverr thật sự bị disruption hay đang chuyển mô hình thành công?
+- Câu hỏi 3: Fiverr Go có thể biến freelancer thành người sở hữu AI model cá nhân, hay chỉ làm buyer càng ít cần thuê người thật?
+- Câu hỏi 4: Moat mạnh nhất của Fiverr là brand/distribution hay transaction data, và moat đó có đủ chống lại ChatGPT/Cursor/Copilot không?

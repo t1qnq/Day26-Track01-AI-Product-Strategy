@@ -2,287 +2,199 @@
 artifact: 2 — Phân tích case theo 4 câu hỏi
 bai-tap: 1 — Tìm 1 case bị ảnh hưởng bởi big tech AI (cá nhân)
 phase: Vận dụng Lens 1 (Customer Expectations + Four Fits)
-time: 15 phút (xem deck slide 4 để biết khung giờ chính xác trong buổi)
+time: 15 phút
 input: 1-research.md + prompts/02-four-fits-analysis.md
 nop-cuoi: Không — file trung gian
 ---
 
-# 2 — Phân tích case: Phần A (4 câu hỏi chiến lược) + Phần B (5 chiều phân tích)
+# 2 — Phân tích case: Fiverr bị AI thay thế các task freelance đơn giản
 
-Mục tiêu: bạn trả lời 4 câu hỏi chiến lược (Phần A) và bổ sung 5 chiều phân tích định lượng (Phần B) cho case mình chọn. Mọi nhận định lấy từ số liệu đã tìm ở `1-research.md` làm bằng chứng. Lab 1 là phần cá nhân — phân tích trong file này là của riêng học viên.
-
-Lý do làm bước này: số liệu thô chưa phải nhận định. Phần A vận dụng Lens 1 (7 Customer Expectation Shifts + Four Fits + Big Squeeze) để giải thích **vì sao** case này sụp đổ. Phần B đào sâu vào quy mô tệp người dùng, tốc độ tăng trưởng, doanh thu, cấu trúc moat và data flywheel — những chiều quyết định khả năng phòng thủ của sản phẩm.
-
-Quy tắc: mỗi câu trả lời phải tham chiếu ít nhất 2 số liệu từ `1-research.md`. Phần B yêu cầu số liệu định lượng cụ thể (kèm nguồn) — nếu không tìm được, ghi rõ "không có nguồn công khai".
-
-## Quy trình 15 phút
-
-```text
-3 phút  — Đọc lại 1-research.md
-7 phút  — Phần A: trả lời 4 câu hỏi chiến lược
-4 phút  — Phần B: điền 5 chiều phân tích định lượng
-1 phút  — Rà lại: mỗi câu có bằng chứng chưa?
-```
+Mục tiêu của file này là chuyển bảng số liệu ở `1-research.md` thành nhận định chiến lược. Luận điểm chính: Fiverr không bị AI "giết" toàn bộ, nhưng AI làm vỡ phần nhu cầu thấp, lặp lại, dễ mô tả bằng prompt. Vì vậy Fiverr phải rời trọng tâm từ marketplace gig nhỏ sang higher-value services, Pro/upmarket, AI matching và Fiverr Go.
 
 ---
 
 # Phần A — 4 câu hỏi chiến lược
 
----
-
 ## Câu hỏi 1 — Trước AI, sản phẩm hoạt động dựa trên giả định gì?
 
-Câu hỏi phụ:
+Trước khi ChatGPT phổ biến, Fiverr hoạt động dựa trên các giả định sau:
 
-- Người dùng sản phẩm là ai? (sinh viên, lập trình viên, content creator, doanh nghiệp...)
-- Họ tìm đến sản phẩm vì điều gì? (giải bài tập, viết code, soạn nội dung, ...)
-- Sản phẩm cung cấp giá trị gì cho họ? (tài liệu, đáp án, công cụ, mạng lưới chuyên gia...)
-- Mô hình kinh doanh là gì? (gói tháng, gói năm, trả lẻ, freemium...)
-- Tại sao mô hình này hoạt động được nhiều năm?
-
-### Trả lời
-
-Trước khi big tech AI ra tính năng tương tự, sản phẩm hoạt động dựa trên các giả định sau:
-
-- **Người dùng**: [...]
-- **Vấn đề người dùng cần giải**: [...]
-- **Giá trị sản phẩm cung cấp**: [...]
-- **Mô hình kinh doanh**: [...]
+- **Người dùng**: buyer là cá nhân, startup nhỏ, marketer, founder, creator hoặc team nhỏ cần thuê người làm nhanh các task digital; seller là freelancer bán dịch vụ đóng gói thành gig.
+- **Vấn đề người dùng cần giải**: buyer không có thời gian/kỹ năng để tự làm logo, copy, dịch, chỉnh sửa văn bản, code nhỏ, landing page, video ngắn hoặc asset marketing.
+- **Giá trị sản phẩm cung cấp**: Fiverr biến việc thuê freelancer thành trải nghiệm như mua sản phẩm: có catalogue, package, rating, deadline, escrow và search.
+- **Mô hình kinh doanh**: marketplace take rate trên giao dịch, cộng thêm buyer service fee và các dịch vụ mở rộng như Seller Plus, ads, AutoDS, Fiverr Go.
 - **Vì sao mô hình này hoạt động**:
-  - Lý do 1: [...]
-  - Lý do 2: [...]
-  - Lý do 3: [...]
+  - Task nhỏ vẫn cần người làm vì trước AI, buyer không dễ tự tạo output đủ dùng trong vài phút.
+  - Fiverr có liquidity: nhiều seller, nhiều gig, nhiều lựa chọn giá.
+  - Buyer chấp nhận phí marketplace vì giảm ma sát tìm người, thanh toán, review và dispute.
 
-**Bằng chứng** (tham chiếu số liệu từ `1-research.md`):
+**Bằng chứng**:
 
-- [Số liệu S-__]: [...]
-- [Số liệu S-__]: [...]
+- [S-01] Fiverr có 4.217 triệu active buyers cuối 2021, tăng 23% YoY.
+- [S-02] Doanh thu năm 2021 là $297.7 triệu, tăng mạnh trong giai đoạn remote work/COVID.
+- [S-13] Fiverr có buyer service fee 5.5%, chứng tỏ mô hình kiếm tiền dựa trên việc buyer chấp nhận trả thêm cho sự tiện lợi của marketplace.
 
 ---
 
-## Câu hỏi 2 — Kỳ vọng của người dùng đã thay đổi như thế nào? (liên hệ 7 dịch chuyển)
+## Câu hỏi 2 — Kỳ vọng của người dùng đã thay đổi như thế nào?
 
-Câu hỏi phụ:
+Trong case Fiverr, các Customer Expectation Shifts quan trọng nhất là:
 
-- Trong 7 Customer Expectation Shifts đã học ở Lens 1, shift nào áp dụng vào case bạn chọn rõ nhất?
-- Trước đây: người dùng kỳ vọng gì từ sản phẩm này?
-- Sau khi big tech AI ra tính năng tương tự: người dùng kỳ vọng gì khác?
-- So sánh hành vi cụ thể: trước đây người dùng làm thế nào, giờ làm thế nào?
+- **Shift 1 — Do the work for me**: trước đây buyer thuê freelancer để làm task; sau ChatGPT, buyer kỳ vọng AI làm bản nháp đầu tiên ngay lập tức.
+- **Shift 5 — Expect it now**: trước đây chờ freelancer trả lời, báo giá, làm và sửa; nay buyer muốn output trong vài giây/phút.
+- **Shift 4 — Pay for output, not seat/time**: buyer không muốn trả nhiều gig nhỏ nếu cùng ngân sách có thể mua một AI tool dùng nhiều lần.
+- **Shift 6 — Interface adapts to me**: buyer không cần học format gig; họ chỉ cần chat bằng ngôn ngữ tự nhiên.
 
-### Trả lời
-
-7 Customer Expectation Shifts (nhắc lại):
-
-1. Do the work for me (tool → teammate)
-2. Custom made for me
-3. Busy work done for me
-4. Pay for output (not seat)
-5. Expect it now (instant)
-6. Interface adapts to me
-7. Tool sees what I'm doing (context-aware)
-
-Trong case bạn chọn, các shift quan trọng nhất là:
-
-- **Shift số ___**: [tên shift] — vì [...]
-- **Shift số ___**: [tên shift] — vì [...]
-
-So sánh kỳ vọng cũ và mới của người dùng:
-
-| Trước khi big tech AI ra tính năng tương tự (kỳ vọng cũ) | Sau khi big tech AI ra tính năng tương tự (kỳ vọng mới) |
+| Trước khi ChatGPT ra mắt | Sau khi ChatGPT/Copilot/Cursor phổ biến |
 |---|---|
-| [...] | [...] |
-| [...] | [...] |
-| [...] | [...] |
-| [...] | [...] |
+| Buyer thuê freelancer viết blog, email, mô tả sản phẩm, code snippet. | Buyer tự prompt AI để có bản nháp trong vài phút. |
+| Giá trị Fiverr nằm ở việc tìm đúng người và quản lý giao dịch. | Giá trị chuyển sang chất lượng output, tốc độ, khả năng chỉnh sửa tức thì. |
+| Gig nhỏ $5-$50 hợp lý vì tự làm tốn thời gian. | Gig nhỏ bị so sánh với AI miễn phí hoặc subscription AI. |
+| Trust đến từ rating/review của seller. | Trust đến từ việc buyer có thể thử nhiều phiên bản ngay và tự kiểm chứng. |
 
 **Bằng chứng**:
 
-- [Số liệu S-__]: [...]
-- [Số liệu S-__]: [...]
+- [S-03] ChatGPT ra mắt ngày 30/11/2022, tạo interface chat đơn giản cho nhiều task ngôn ngữ/coding.
+- [S-04] Đến 24/01/2023, Fiverr ghi nhận searches for AI-related services tăng hơn 1400%, chỉ khoảng 2 tháng sau ChatGPT.
+- [S-05], [S-12] Active buyers giảm từ 3.630 triệu cuối 2024 xuống 2.907 triệu Q1 2026.
 
 ---
 
-## Câu hỏi 3 — Giả định nào của sản phẩm đã không còn đúng? (dẫn số liệu cụ thể)
+## Câu hỏi 3 — Giả định nào của sản phẩm đã không còn đúng?
 
-Câu hỏi phụ:
+### Bốn Fit của Fiverr trước AI
 
-- Trong khung Four Fits (Market / Product / Channel / Model), Fit nào vỡ trước tiên?
-- Fit nào vỡ sau đó như hệ quả?
-- Dùng số liệu cụ thể để chứng minh từng Fit đã vỡ.
+- **Product Market Fit**: Fiverr giải quyết nhu cầu thuê người làm nhanh task digital nhỏ.
+- **Product Channel Fit**: SEO, paid marketing, marketplace search và brand "hire a freelancer fast" đưa buyer vào platform.
+- **Channel Model Fit**: mô hình take rate phù hợp khi buyer/seller cần marketplace đứng giữa.
+- **Model Market Fit**: thị trường chấp nhận trả phí giao dịch vì output không thể tự động tạo đủ tốt.
 
-### Trả lời
+### Sau AI shock, các Fit đã vỡ theo trình tự
 
-Khung Four Fits:
+1. **Fit vỡ đầu tiên: Product Market Fit**
+   - Vấn đề: Với task đơn giản, product "thuê freelancer" không còn là cách nhanh nhất để có output.
+   - Bằng chứng: [S-03] ChatGPT mở khả năng tạo text/code bằng prompt; [S-04] search AI services trên Fiverr tăng hơn 1400%, cho thấy buyer/seller dịch chuyển sang AI.
 
-```text
-Market ←—Product Market Fit—→ Product
-  ↕                            ↕
-Model ←—Channel Model Fit—→ Channel
-```
+2. **Fit vỡ thứ hai: Model Market Fit**
+   - Vấn đề: Buyer khó chấp nhận trả từng gig nhỏ cộng service fee nếu AI tool có thể làm nhiều lần với chi phí thấp hơn.
+   - Bằng chứng: [S-13] buyer phải trả service fee 5.5% và small order fee; [S-10] chính Fiverr cũng chuyển sang bán AI Creation Model subscription $25/tháng cho seller.
 
-Bốn Fit của sản phẩm trước AI:
+3. **Fit vỡ thứ ba: Product Channel Fit**
+   - Vấn đề: Kênh phân phối "search marketplace để tìm gig" bị cạnh tranh bởi chat interface. Người dùng bắt đầu đi thẳng vào ChatGPT/Cursor/Copilot thay vì vào Fiverr tìm freelancer.
+   - Bằng chứng: [S-05] active buyers giảm 10% YoY cuối 2024; [S-12] active buyers giảm 17.8% YoY Q1 2026.
 
-- **Product Market Fit**: sản phẩm giải đúng vấn đề của người dùng (cụ thể: [...]).
-- **Product Channel Fit**: kênh phân phối ([...]) đưa người dùng vào sản phẩm.
-- **Channel Model Fit**: mô hình kinh doanh ([...]) phù hợp với kênh phân phối.
-- **Model Market Fit**: mô hình kinh doanh phù hợp với thị trường ([...]).
+4. **Fit vỡ thứ tư: Channel Model Fit**
+   - Vấn đề: Marketplace cần nhiều buyer/seller và nhiều giao dịch nhỏ. Khi giao dịch nhỏ bị AI ăn mất, Fiverr phải bù bằng higher-value buyers, services revenue, Pro và AI products.
+   - Bằng chứng: [S-06] marketplace revenue 2024 giảm 1.3% YoY, trong khi [S-07] services revenue tăng 62.5%.
 
-Sau khi big tech AI ra tính năng tương tự, các Fit đã vỡ theo trình tự:
+### Tốc độ vỡ Fit
 
-1. **Fit vỡ đầu tiên**: [PMF / PCF / CMF / MMF] — vì [...]
-   - Bằng chứng: [Số liệu S-__]: [...]
-2. **Fit vỡ thứ hai**: [...] — vì [...]
-   - Bằng chứng: [Số liệu S-__]: [...]
-3. **Fit vỡ thứ ba**: [...] — vì [...]
-4. **Fit vỡ thứ tư**: [...] — vì [...]
+- Fiverr chưa mất 50% active buyers, nên không phải collapse kiểu "rơi tự do".
+- Nhưng active buyers giảm từ 4.217 triệu cuối 2021 xuống 2.907 triệu Q1 2026, tức giảm khoảng 31%.
+- Sau ChatGPT khoảng 40 tháng, marketplace revenue Q1 2026 giảm 13.6% YoY và active buyers giảm 17.8% YoY.
 
-Tốc độ vỡ Fit (Fit Collapse):
-
-- Từ khi big tech AI ra tính năng tương tự đến khi sản phẩm mất 50% người dùng/doanh thu: ___ tháng.
-- So sánh với pre-AI: tốc độ tương tự trong ngành thường mất ___ năm.
-- Kết luận: case này [đã / chưa] trải qua **Fit Collapse**.
-
-**Bằng chứng**:
-
-- [Số liệu S-__]: [...]
-- [Số liệu S-__]: [...]
-- [Số liệu S-__]: [...]
+Kết luận: Fiverr trải qua **slow-burn Fit Collapse** ở marketplace lõi. AI không phá toàn bộ công ty, nhưng kéo phần low-end demand ra khỏi marketplace và buộc Fiverr phải tái định vị.
 
 ---
 
-## Câu hỏi 4 — Sản phẩm có thể cứu vãn? Hay đã quá muộn? (ý kiến + lý lẽ + số liệu)
+## Câu hỏi 4 — Sản phẩm có thể cứu vãn? Hay đã quá muộn?
 
-Câu hỏi phụ:
+### So sánh Fiverr với đối thủ phản ứng tốt hơn
 
-- Có đối thủ nào trong cùng ngành phản ứng tốt hơn không? Họ đã làm khác gì?
-- Nếu sản phẩm phản ứng nhanh hơn (vd: trong vòng 6 tháng sau khi big tech AI ra mắt), có thể giữ được không?
-- Mô hình kinh doanh nào còn khả thi cho sản phẩm này? (chuyển sang B2B? niche khác? mua lại sản phẩm AI?)
-- Vai trò của Big Squeeze (3 lực nén) trong việc này?
-
-### Trả lời
-
-So sánh phản ứng của case bạn chọn với đối thủ phản ứng tốt hơn:
-
-| Yếu tố | Case bạn chọn | Đối thủ phản ứng tốt hơn |
+| Yếu tố | Fiverr | Upwork |
 |---|---|---|
-| Đối tác AI | [...] | [...] |
-| Thời gian ra mắt sản phẩm AI | ___ tháng | ___ tháng |
-| Giá sản phẩm AI | $___ | $___ |
-| Tích hợp với sản phẩm cũ | [...] | [...] |
-| Mô hình kinh doanh | [...] | [...] |
+| Đối tác / AI approach | Fiverr Go, Dynamic Matching, AI Creation Model | Uma AI, proposal drafts, candidate evaluation, managed services |
+| Thời gian ra mắt AI platform chính | Fiverr Go: 02/2025, khoảng 27 tháng sau ChatGPT | Uma: 04/2024, khoảng 17 tháng sau ChatGPT |
+| Giá sản phẩm AI | AI Creation Model $25/tháng cho freelancer | Uma gắn vào workflow Upwork; pricing không tách riêng công khai |
+| Tích hợp với sản phẩm cũ | AI model của freelancer, matching buyer-seller | AI hỗ trợ cả hiring, proposal, scoping, managed outcomes |
+| Mô hình kinh doanh | Marketplace + services revenue + upmarket | Marketplace + enterprise + managed services/work outcomes |
+| Kết quả | Active buyers và marketplace revenue giảm, services revenue tăng | FY2024 record revenue $769.3 triệu |
 
-Big Squeeze trên case bạn chọn (3 lực nén):
+### Big Squeeze trên Fiverr
 
-- **Lực 1 — Doanh nghiệp lớn sao chép**: [big tech AI nào? Google, Microsoft, Meta?]
-  - Cụ thể: [...]
-- **Lực 2 — Startup khác xây nhanh hơn**: [startup nào trong cùng ngành xây sản phẩm AI nhanh hơn?]
-  - Cụ thể: [...]
-- **Lực 3 — Platform AI gom người dùng**: [ChatGPT, Claude, Gemini có trở thành điểm đến mặc định không?]
-  - Cụ thể: [...]
+- **Lực 1 — Doanh nghiệp lớn sao chép/thay thế**: OpenAI/ChatGPT thay thế task text/copy/code đơn giản; Microsoft/GitHub Copilot và Cursor thay thế micro-task code.
+- **Lực 2 — Startup khác xây nhanh hơn**: Cursor, Midjourney, Canva AI, Jasper/Copy.ai và nhiều tool vertical AI giúp buyer tự tạo output.
+- **Lực 3 — Platform AI gom người dùng**: ChatGPT trở thành điểm đến mặc định cho task "hãy viết/thiết kế/phân tích/code giúp tôi", làm giảm nhu cầu vào marketplace để tìm người cho bản nháp đầu.
 
-Đánh giá của bạn:
+### Đánh giá
 
-- **Sản phẩm có cứu vãn được không?**: [Có / Không / Có nhưng cần ___]
+- **Sản phẩm có cứu vãn được không?**: Có, nhưng không thể cứu bằng cách giữ marketplace gig nhỏ như cũ.
 - **Lý do**:
-  - Lý do 1: [...]
-  - Lý do 2: [...]
-  - Lý do 3: [...]
-- **Điều sản phẩm đáng lẽ phải làm khác** (trong 6 tháng đầu sau khi big tech AI ra mắt):
-  - [...]
-  - [...]
-  - [...]
+  - Fiverr vẫn có brand, payment/trust layer và transaction data.
+  - Buyer phức tạp vẫn cần người thật cho judgment, taste, trách nhiệm và chỉnh sửa cuối.
+  - Nhưng low-end/simple tasks sẽ tiếp tục bị AI commoditize.
+- **Điều Fiverr đáng lẽ phải làm khác trong 6 tháng đầu sau ChatGPT**:
+  - Ra AI assistant cho buyer/seller sớm hơn, không đợi đến 2024-2025 mới đẩy mạnh Dynamic Matching/Fiverr Go.
+  - Tách rõ "AI-assisted freelancer" khỏi gig thường để buyer thấy vì sao cần trả tiền cho người.
+  - Chuyển pricing/value từ "mua task nhỏ" sang "mua outcome có người chịu trách nhiệm".
 
 **Bằng chứng**:
 
-- [Số liệu S-__]: [...]
-- [Số liệu S-__]: [...]
-
----
+- [S-08] Dynamic Matching ra tháng 12/2024, khá muộn so với ChatGPT.
+- [S-09], [S-10] Fiverr Go ra tháng 02/2025 và có subscription AI Creation Model $25/tháng.
+- [S-14], [S-15] Upwork có Uma từ 04/2024 và đạt FY2024 record revenue.
 
 ---
 
 # Phần B — 5 chiều phân tích định lượng
 
-Phần A trả lời "vì sao". Phần B trả lời "lớn cỡ nào, đi nhanh đến đâu, dựa vào hào nào". Mỗi mục yêu cầu số liệu cụ thể; nếu không có nguồn công khai, ghi rõ "không có nguồn công khai" thay vì để trống.
+## B1 — User base
 
-## B1 — User base (số lượng người dùng)
-
-So sánh quy mô tệp người dùng trước và sau khi big tech AI ra tính năng tương tự. Chọn các chỉ số phù hợp với case (paid subscribers / free users / MAU / DAU / registered accounts).
-
-| Chỉ số | Trước AI shock | Sau AI shock | Nguồn (URL · ngày) |
+| Chỉ số | Trước AI shock | Sau AI shock | Nguồn |
 |---|---|---|---|
-| Người dùng trả tiền (paid) | | | |
-| Người dùng miễn phí (free) | | | |
-| MAU (monthly active) | | | |
-| DAU (daily active) | | | |
+| Người dùng trả tiền | Không tách paid/free; Fiverr dùng active buyers | Không tách paid/free | Fiverr IR |
+| Người dùng miễn phí | Không công khai | Không công khai | Fiverr IR |
+| Annual active buyers | 4.217 triệu cuối 2021 | 2.907 triệu Q1 2026 | [S-01], [S-12] |
+| DAU/MAU | Không công khai | Không công khai | Không có nguồn công khai |
 
-Nhận định 1-2 câu: tệp người dùng nào sụt nhanh nhất, tệp nào còn giữ được?
-
-- [...]
+Nhận định: active buyers giảm khoảng 31% từ cuối 2021 đến Q1 2026. Vì Fiverr chỉ tính buyer có giao dịch trong 12 tháng, đây là chỉ số tốt để đo nhu cầu thật trên marketplace.
 
 ## B2 — Tốc độ tăng trưởng
 
-So sánh tốc độ tăng trưởng người dùng / doanh thu trước và sau khi big tech AI ra mắt. Nếu tăng trưởng đã chuyển sang âm (suy giảm), ghi rõ thời điểm chuyển trục.
-
-| Giai đoạn | Tốc độ tăng trưởng | Nguồn (URL · ngày) |
+| Giai đoạn | Tốc độ tăng trưởng | Nguồn |
 |---|---|---|
-| Trước AI shock (___ năm gần nhất) | ___ %/năm | |
-| Sau AI shock (mới nhất) | ___ %/năm (hoặc giảm ___%) | |
-| Thời điểm tăng trưởng bắt đầu đảo chiều | | |
+| 2021 | Active buyers tăng 23% YoY; revenue tăng mạnh lên $297.7 triệu | [S-01], [S-02] |
+| FY2024 | Total revenue tăng 8.3%, nhưng marketplace revenue giảm 1.3% | [S-06] |
+| Q1 2026 | Active buyers giảm 17.8% YoY; marketplace revenue giảm 13.6% YoY | [S-12] |
 
-Nhận định 1-2 câu: case này đã thật sự quay đầu giảm hay chỉ chậm lại?
-
-- [...]
+Nhận định: Fiverr chưa suy giảm ở tổng doanh thu cho đến 2024 vì services revenue bù lại, nhưng marketplace lõi đã đảo chiều. Q1 2026 là tín hiệu rõ nhất rằng buyer base và marketplace revenue chịu áp lực mạnh.
 
 ## B3 — Doanh thu / valuation
 
-Đào sâu số liệu tài chính có thể truy xuất công khai. Nếu là công ty niêm yết, dễ tìm trong báo cáo quý; nếu là startup tư nhân, có thể chỉ có valuation từ vòng gọi vốn.
-
-| Chỉ số | Trước AI shock | Sau AI shock | Nguồn (URL · ngày) |
+| Chỉ số | Trước AI shock | Sau AI shock | Nguồn |
 |---|---|---|---|
-| ARR (annual recurring revenue) | | | |
-| MRR (monthly recurring revenue) | | | |
-| Valuation / market cap | | | |
-| ARPU / ARPA (doanh thu trung bình mỗi user) | | | |
+| ARR | Không công khai theo ARR | Không công khai theo ARR | Fiverr báo cáo annual revenue |
+| Annual revenue | $297.7 triệu FY2021 | $391.5 triệu FY2024 | [S-02], [S-06] |
+| Marketplace revenue | Không tách theo định nghĩa mới trong FY2021 | $303.1 triệu FY2024, giảm 1.3% YoY; $67.1 triệu Q1 2026, giảm 13.6% YoY | [S-06], [S-12] |
+| Valuation / stock | Stock all-time high closing price $323.10 ngày 12/02/2021 | Không dùng làm số chính vì biến động thị trường rộng | MacroTrends: https://macrotrends.net/stocks/charts/FVRR/fiverr/stock-price-history |
+| Spend per buyer | $242 cuối 2021 | $356 Q1 2026 | [S-01], [S-12] |
 
-Số liệu có công khai không (Có / Không công khai / Chỉ ước tính từ báo chí)? Lý do quan trọng: số liệu càng đáng tin, phân tích càng nặng ký.
-
-- [...]
+Nhận định: revenue tổng chưa phản ánh đầy đủ disruption vì Fiverr đã tăng monetization/spend per buyer và services revenue. Chỉ số đáng chú ý hơn là active buyers và marketplace revenue.
 
 ## B4 — Moat strategy
 
-Sản phẩm trước AI dựa vào hào phòng thủ nào? Liệt kê các loại moat áp dụng, chọn loại moat chủ đạo, rồi xác định loại moat đó có bị big tech AI tấn công không.
-
 | Loại moat | Có / Không có / Mức mạnh | Bằng chứng cụ thể |
 |---|---|---|
-| Data moat (dữ liệu độc quyền) | | |
-| Network effect (hiệu ứng mạng) | | |
-| Switching cost (chi phí chuyển đổi) | | |
-| Brand (thương hiệu) | | |
-| Distribution (kênh phân phối) | | |
+| Data moat | Có, trung bình | Fiverr nói Fiverr Go tận dụng transaction/portfolio data; Dynamic Matching dùng internal data và customer feedback |
+| Network effect | Có, nhưng yếu hơn khi AI thay thế task nhỏ | Marketplace cần nhiều buyer/seller; active buyers giảm cho thấy network effect không tuyệt đối |
+| Switching cost | Thấp với buyer gig nhỏ, cao hơn với seller có profile/review | Buyer có thể dùng ChatGPT/Cursor ngay; seller bị giữ bởi review/history |
+| Brand | Mạnh | Fiverr là brand quen thuộc cho freelance gigs |
+| Distribution | Mạnh nhưng bị platform AI tấn công | Search marketplace bị thay bằng chat interface |
 
-- **Moat chủ đạo của sản phẩm trước AI**: [tên moat] — vì [...]
-- **Big tech AI tấn công moat nào**: [tên moat bị tấn công] — bằng cách nào?
-- **Moat nào vẫn còn hiệu quả** (nếu có): [...] — vì sao chưa bị phá?
+- **Moat chủ đạo trước AI**: distribution + brand + marketplace liquidity.
+- **Big tech AI tấn công moat nào**: tấn công Product Market Fit và distribution bằng cách biến nhiều task thành self-serve prompt.
+- **Moat còn lại**: trust/payment/review và data về freelancer thật; hữu ích cho task phức tạp, nhưng không đủ giữ các gig đơn giản.
 
-Nhận định 1-2 câu: cấu trúc moat của case này có chống chịu được áp lực AI không?
-
-- [...]
+Nhận định: moat của Fiverr chống được phần "tìm người thật đáng tin", nhưng không chống tốt phần "làm task đơn giản".
 
 ## B5 — Data flywheel + feedback loop
 
-Sản phẩm có vòng lặp dữ liệu (data flywheel) đủ mạnh để cải thiện sản phẩm theo thời gian không? Phân biệt giữa "có thu thập dữ liệu người dùng" và "có vòng lặp compounding thực sự".
+- **Hành động người dùng feed lại model/sản phẩm**: buyer search, click gig, đặt hàng, review, repeat purchase, seller portfolio/delivery, chat/order history.
+- **Loop có compounding không?**: Có một phần. Nhiều giao dịch giúp matching tốt hơn, nhưng không tạo output trực tiếp tốt hơn như model AI foundation.
+- **Thu thập feedback systematically không?**: Có, thể hiện qua Dynamic Matching dùng internal data/customer feedback và Fiverr Go dùng portfolio/transaction data.
+- **Big tech AI vô hiệu hoá flywheel ở đâu**: AI platform không cần dữ liệu marketplace để làm task đơn giản; chỉ cần prompt + model tổng quát. Khi buyer không đặt gig, Fiverr mất thêm tín hiệu giao dịch.
 
-- **Hành động người dùng nào feed lại model / sản phẩm?**: [vd: click, rating, edit, share, undo...]
-- **Loop có compounding không?**: [Có / Không / Một phần]
-  - Nếu có: amplification factor (1 user mới → ___ user kế tiếp) — ước tính dựa trên số liệu nào?
-  - Nếu không: vì sao loop không compounding?
-- **Sản phẩm có thu thập feedback systematically không?**: [Có / Không / Chỉ thu nhưng không dùng]
-- **Big tech AI có vô hiệu hoá flywheel này không?**: [Có / Không / Một phần] — bằng cách nào?
-
-Nhận định 1-2 câu: nếu loop bị big tech AI gỡ bỏ, sản phẩm còn gì để giữ chân người dùng?
-
-- [...]
+Nhận định: data flywheel của Fiverr mạnh ở matching người-với-việc, nhưng yếu hơn ở chính output generation. Khi output generation bị AI platform nắm, Fiverr phải chuyển flywheel sang "AI-assisted human outcomes".
 
 ---
 
@@ -290,16 +202,12 @@ Nhận định 1-2 câu: nếu loop bị big tech AI gỡ bỏ, sản phẩm cò
 
 | Phần | Đã trả lời chưa? | Có ít nhất 2 bằng chứng? |
 |---|---|---|
-| A — Câu 1 — Giả định cũ | / | / |
-| A — Câu 2 — Kỳ vọng người dùng thay đổi | / | / |
-| A — Câu 3 — Fit nào vỡ | / | / |
-| A — Câu 4 — Sản phẩm có cứu được không | / | / |
-| B1 — User base | / | / |
-| B2 — Tốc độ tăng trưởng | / | / |
-| B3 — Doanh thu / valuation | / | / |
-| B4 — Moat strategy | / | / |
-| B5 — Data flywheel + feedback loop | / | / |
-
-Nếu phần nào chưa có ít nhất 2 bằng chứng → quay lại `1-research.md` tìm thêm số liệu.
-
-Sau bước này, chuyển sang `3-FINAL-case-analysis.md` để viết phiên bản nộp.
+| A — Câu 1 — Giả định cũ | Có | Có |
+| A — Câu 2 — Kỳ vọng người dùng thay đổi | Có | Có |
+| A — Câu 3 — Fit nào vỡ | Có | Có |
+| A — Câu 4 — Sản phẩm có cứu được không | Có | Có |
+| B1 — User base | Có | Có |
+| B2 — Tốc độ tăng trưởng | Có | Có |
+| B3 — Doanh thu / valuation | Có | Có |
+| B4 — Moat strategy | Có | Có |
+| B5 — Data flywheel + feedback loop | Có | Có |
