@@ -24,7 +24,7 @@ File này khai báo 2 thành viên trong nhóm + phân công thực hiện.
 
 ## Nhiệm vụ thử nghiệm chung
 
-Nhiệm vụ chung: "Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi, có kèm unit test và giải thích chi tiết phần xử lý edge cases."
+Nhiệm vụ chung: "S."
 
 **Ngành chọn**: [B — Lập trình]
 
