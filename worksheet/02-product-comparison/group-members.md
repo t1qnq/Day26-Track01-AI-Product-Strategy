@@ -18,7 +18,7 @@ File này khai báo 2 thành viên trong nhóm + phân công thực hiện.
 | # | Mã học viên | Họ tên đầy đủ | Phân công chính |
 |---|---|---|---|
 | 1 | 2A202600285 | Quách Ngọc Quang | Test Sản phẩm A (Cursor), phân tích S1-S3 |
-| 2 | A20-XXXXX | [Tên đồng đội] | Test Sản phẩm B (Copilot), phân tích S4-S5 |
+| 2 | 2A202600392 | Nguyễn Đông Hưng | Test Sản phẩm B (GitHub Copilot), phân tích S4-S5 |
 
 ---
 
@@ -37,7 +37,7 @@ Nhiệm vụ chung: "Viết hàm Python tính khoảng cách Levenshtein giữa 
 ## Phân chia screenshot
 
 - Sản phẩm A (Cursor) → Quách Ngọc Quang
-- Sản phẩm B (Copilot) → [Tên đồng đội]
+- Sản phẩm B (GitHub Copilot) → Nguyễn Đông Hưng
 
 ---
 
