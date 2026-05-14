@@ -1,274 +1,237 @@
-# Analysis Report Draft — Cursor vs GitHub Copilot
+# Analysis Report — Cursor vs GitHub Copilot
 
-> File này là bản nội dung để dựng slide/export PDF. Theo yêu cầu hiện tại, chưa tạo `analysis-report.pdf`.
+> **Lab 2 — Phân tích sản phẩm AI** | Ngành [B] Lập trình
+> Nhóm: Quách Ngọc Quang (2A202600285) · Nguyễn Đông Hưng (2A202600392)
 
 ---
 
 ## Cover
 
-- **Ngành**: [B] Lập trình
-- **Sản phẩm A**: Cursor — https://www.cursor.com
-- **Sản phẩm B**: GitHub Copilot — https://github.com/features/copilot
-- **Nhiệm vụ chung**: "Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi, có kèm unit test và giải thích chi tiết phần xử lý edge cases."
-- **Thành viên**:
-  - 2A202600285 — Quách Ngọc Quang
-  - 2A202600392 — Nguyễn Đông Hưng
+| Yếu tố | Thông tin |
+|--------|-----------|
+| **Ngành** | [B] Lập trình |
+| **Sản phẩm A** | Cursor — https://www.cursor.com |
+| **Sản phẩm B** | GitHub Copilot — https://github.com/features/copilot |
+| **Nhiệm vụ chung** | Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi, có kèm unit test và giải thích chi tiết phần xử lý edge cases |
+| **Thành viên** | 2A202600285 — Quách Ngọc Quang · 2A202600392 — Nguyễn Đông Hưng |
 
 ---
 
-## S1 — Product Moment
+# S1 — Product Moment
 
-### Sản phẩm A: Cursor
-
-- **Entry point**: Người dùng mở editor giống VS Code, dùng Chat panel hoặc phím tắt `Ctrl + L`.
-- **Khoảnh khắc chính**: Prompt được nhập trực tiếp trong IDE, AI trả lời bằng code + test + giải thích ngay trong luồng làm việc.
-- **Bằng chứng ảnh**:
-  - `screenshots/01-cursor-entry.png`
-  - `screenshots/02-cursor-input.png`
-
-### Sản phẩm B: GitHub Copilot
-
-- **Entry point**: Người dùng dùng Copilot Chat trong VS Code/GitHub, hoặc gợi ý inline trong file code.
-- **Khoảnh khắc chính**: Copilot bám vào repository/editor context để đề xuất code, giải thích edge cases và có thể tạo file test.
-- **Ảnh cần bổ sung trước khi export PDF**:
-  - `screenshots/product-B-1-entry.png`
-  - `screenshots/product-B-2-input.png`
-  - `screenshots/product-B-3-output.png`
-
-### Nhận định S1
-
-Cursor thắng ở product moment vì AI là trung tâm của editor ngay từ đầu. GitHub Copilot thắng ở độ quen thuộc và distribution vì nằm trong hệ sinh thái GitHub/VS Code mà developer đã dùng sẵn.
-
----
-
-## S2 — Workflow Evidence
-
-### Trước khi có AI
-
-Developer thường phải:
-
-1. Google hoặc Stack Overflow cách viết Levenshtein distance.
-2. Copy/paste code mẫu vào IDE.
-3. Tự sửa edge cases như chuỗi rỗng, Unicode, phân biệt hoa/thường.
-4. Tự viết unit test.
-5. Chạy test và debug.
-
-Ước tính workflow thủ công mất khoảng 10-15 phút với người đã biết Python, lâu hơn với người mới.
-
-### Workflow với Cursor
-
-1. Nhập prompt trực tiếp vào Chat panel trong IDE.
-2. Cursor sinh code cho `levenshtein.py` và `test_levenshtein.py`.
-3. Người dùng dùng "Apply" để chèn code vào file.
-4. Chạy test trong terminal để kiểm chứng.
-
-**Friction areas**:
-
-- Chat output dài, người dùng vẫn phải biết tách file logic/test.
-- Vẫn phải chạy test thủ công trong terminal.
-- Nếu accept quá nhanh, developer có thể bỏ qua review thuật toán.
-
-**Bằng chứng ảnh**:
-
-- `screenshots/03-cursor-output-test.png`
-- `screenshots/04-cursor-output-code.png`
-
-### Workflow với GitHub Copilot
-
-1. Mở VS Code/GitHub repository.
-2. Dùng Copilot Chat với cùng prompt.
-3. Copilot sinh code/test hoặc hướng dẫn sửa trong file hiện tại.
-4. Developer dùng inline suggestions/chat edits để áp dụng.
-5. Chạy test và chỉnh nếu có lỗi.
-
-**Friction areas**:
-
-- Copilot mạnh khi có file/repo context; nếu bắt đầu từ blank workspace, output có thể ít "trọn gói" hơn Cursor.
-- Một số tính năng agent/chat phụ thuộc plan và IDE setup.
-- Dễ bị phân tán vì Copilot nằm trong nhiều bề mặt: VS Code, GitHub web, CLI, pull request, code review.
-
-### Nhận định S2
-
-Cursor tối ưu cho workflow "AI pair programmer trong editor". Copilot tối ưu cho workflow "AI nằm trong hệ sinh thái dev có sẵn". Với task Levenshtein từ đầu, Cursor có lợi thế vì trải nghiệm prompt-to-files mạch lạc hơn.
-
----
-
-## S3 — Output & Trust
-
-### Cursor
-
-- **Chất lượng output**: Rất cao. Hàm `levenshtein_distance` dùng type hints, xử lý input không hợp lệ và tối ưu bộ nhớ bằng mảng 1D/2 hàng thay vì ma trận 2D đầy đủ.
-- **Edge cases**: Chuỗi rỗng, chuỗi giống nhau, phân biệt hoa/thường, Unicode tiếng Việt, input không phải string.
-- **Trust signal**: Không có citation, nhưng có unit test để kiểm chứng bằng thực thi code.
-- **Rủi ro**: Nếu test do AI tự sinh chưa đủ, output có thể "trông đúng" nhưng thiếu case quan trọng.
-
-### GitHub Copilot
-
-- **Chất lượng output kỳ vọng**: Cao với code phổ biến như Levenshtein, đặc biệt khi trong repo đã có convention test.
-- **Edge cases cần kiểm tra**: Chuỗi rỗng, Unicode, chuỗi dài, input `None`, case-sensitive, performance.
-- **Trust signal**: Tích hợp sâu với editor/GitHub giúp review diff, chạy test, tạo PR hoặc code review.
-- **Rủi ro**: Copilot không cung cấp nguồn cho thuật toán; developer vẫn phải kiểm chứng bằng test.
-
-### 6 tín hiệu đáng tin cần chấm
-
-| Tín hiệu | Cursor | GitHub Copilot |
-|---|---|---|
-| Code chạy được | Có bằng chứng ảnh output/test | Cần bổ sung screenshot test |
-| Edge cases | Có nhiều edge cases | Cần kiểm chứng khi test Copilot |
-| Giải thích | Giải thích rõ bằng tiếng Việt | Thường giải thích tốt trong Copilot Chat |
-| Citation/source | Không có | Không có |
-| Dễ kiểm chứng | Có, qua unit test | Có, qua IDE/GitHub workflow |
-| Context awareness | Mạnh trong workspace Cursor | Rất mạnh trong GitHub/VS Code ecosystem |
-
-### Nhận định S3
-
-Với code generation, "trust" không đến từ citation mà đến từ khả năng chạy test, đọc diff và review edge cases. Cursor tạo cảm giác tin nhanh hơn trong demo; Copilot có trust dài hạn tốt hơn khi gắn với repo thật, PR và review workflow.
-
----
-
-## S4 — Business Signal
-
-### Pricing và giới hạn
+## 1.1 Bảng so sánh Entry Point
 
 | Yếu tố | Cursor | GitHub Copilot |
-|---|---|---|
-| Free tier | Hobby/free với giới hạn agent/tab completions | Copilot Free có giới hạn |
-| Individual paid | Pro $20/tháng | Copilot Pro $10/tháng |
-| Higher individual tier | Pro+/Ultra cho agent-heavy users | Copilot Pro+ / premium requests tùy thời điểm |
-| Team/business | Teams $40/user/tháng | Business $19/user/tháng; Enterprise $39/user/tháng |
-| Nguồn | https://cursor.com/pricing | https://github.com/features/copilot/plans |
+|--------|--------|----------------|
+| **URL** | cursor.com | github.com/features/copilot |
+| **Entry point** | Chat panel trong IDE (phím tắt `Ctrl + L`) | Copilot Chat trong VS Code / GitHub web |
+| **Ý định user** | Pair programming agent hiểu toàn bộ codebase | AI assistant gợi ý code inline + chat |
+| **Surface chính** | IDE fork từ VS Code với AI-native UI | VS Code extension + GitHub web interface |
 
-### Cost-Capability-Speed
+## 1.2 Nhiệm vụ chung
 
-| Tiêu chí | Cursor | GitHub Copilot |
-|---|---|---|
-| Cost | Đắt hơn cho cá nhân cơ bản ($20/tháng) | Rẻ hơn cho cá nhân cơ bản ($10/tháng) |
-| Capability | Rất mạnh ở AI-native coding workflow, agent/edit/apply | Rất mạnh ở ecosystem, repo context, PR/review, enterprise |
-| Speed | Nhanh khi bắt đầu task trong Cursor editor | Nhanh nếu team đã ở GitHub/VS Code |
+**Prompt đã dùng:**
 
-### Business signal từ thị trường
+> "Viết hàm Python tính khoảng cách Levenshtein giữa 2 chuỗi, có kèm unit test và giải thích chi tiết phần xử lý edge cases."
 
-- Cursor được Sacra ước tính đạt khoảng $200M ARR và khoảng 720,000 paying users trong giai đoạn 2024-2025, cho thấy developer sẵn sàng trả tiền cho AI-native IDE.
-- Microsoft 2025 Annual Report ghi GitHub Copilot có hơn 20 triệu users và đã tiến hóa thành peer programmer.
-- Copilot có distribution moat rất lớn vì gắn với GitHub, VS Code, Microsoft enterprise và developer workflow hiện hữu.
+## 1.3 Nhận định
 
-### Nhận định S4
+**Cursor** thắng ở **Product Moment**: AI được thiết kế làm trung tâm của editor ngay từ đầu — người dùng gõ prompt và nhận code ngay trong IDE, không cần chuyển context.
 
-Cursor có pricing power tốt với power users vì product moment rất mạnh. Copilot có business moat tốt hơn nhờ distribution và enterprise bundling. Nếu chỉ xét cá nhân làm bài code nhanh, Cursor đáng tiền hơn; nếu xét tổ chức và repo thật, Copilot có lợi thế kinh doanh lớn hơn.
+**GitHub Copilot** thắng ở **Distribution**: nằm sẵn trong hệ sinh thái GitHub/VS Code mà developer đã quen dùng, không cần cài thêm tool mới hay thay đổi workflow.
 
 ---
 
-## S5 — Product Judgment
+# S2 — Workflow Evidence
 
-### S5.1 Verdict
-
-| Sản phẩm | Verdict | Lý do |
-|---|---|---|
-| Cursor | **Strong** | Product moment rõ, workflow AI-native, rất hợp với developer muốn từ prompt sang code/test nhanh. |
-| GitHub Copilot | **Strong** | Distribution và ecosystem mạnh, phù hợp team/repo thật hơn là demo đơn lẻ. |
-
-Kết luận ngắn: Cursor thắng ở trải nghiệm sử dụng tức thì; Copilot thắng ở moat và khả năng đi sâu vào workflow tổ chức.
-
-### S5.2 User base + tăng trưởng
-
-| Chỉ số | Cursor | GitHub Copilot |
-|---|---|---|
-| Users / paying users | Sacra ước tính khoảng 720,000 paying users khi đạt $200M ARR | Microsoft báo cáo hơn 20 triệu users |
-| Revenue / ARR | Sacra ước tính khoảng $200M ARR | Sacra từng ước tính Copilot khoảng $400M ARR; Microsoft không tách revenue chính thức |
-| Growth signal | Tăng nhanh trong nhóm AI coding tool | Enterprise adoption và GitHub/Microsoft distribution rất mạnh |
-| Nguồn | https://sacra.com/research/cursor-at-200m-arr/ | https://www.microsoft.com/investor/reports/ar25/index.html |
-
-Nhận định: Cursor có hypergrowth nhưng dựa trên ước tính bên thứ ba. Copilot có số user chính thức hơn và distribution rộng hơn.
-
-### S5.3 Doanh thu / pricing power
-
-| Yếu tố | Cursor | GitHub Copilot |
-|---|---|---|
-| Pricing power cá nhân | Cao: Pro $20/tháng, Pro+/Ultra cho heavy users | Tốt: Pro $10/tháng dễ vào, Business/Enterprise cho org |
-| Pricing power enterprise | Đang tăng qua Teams/Enterprise | Rất mạnh nhờ GitHub/Microsoft procurement |
-| Mức công khai | Pricing công khai; ARR là ước tính | Pricing công khai; user có nguồn Microsoft, revenue không tách rõ |
-
-Nhận định: Cursor kiếm tiền tốt từ developer power users. Copilot có thể mở rộng doanh thu tốt hơn ở enterprise vì được mua theo seat trong tổ chức.
-
-### S5.4 Moat phân tích
-
-| Moat | Cursor | GitHub Copilot |
-|---|---|---|
-| Data moat | Trung bình: workspace/editor interaction | Cao hơn: GitHub repo, PR, issue, enterprise workflow |
-| Network effect | Thấp-trung bình | Cao: GitHub developer ecosystem |
-| Switching cost | Trung bình: quen Cursor workflow/rules | Cao hơn với tổ chức dùng GitHub/VS Code |
-| Brand | Mạnh trong AI-native coding | Rất mạnh vì GitHub + Microsoft |
-| Distribution | Trung bình, phải thuyết phục dev đổi editor | Rất mạnh, nằm trong GitHub/VS Code/enterprise |
-
-Nhận định: Cursor có product moat; Copilot có distribution moat. Product moat có thể bị copy, nhưng distribution moat của Copilot khó bị phá hơn.
-
-### S5.5 Data flywheel + feedback loop
-
-| Câu hỏi | Cursor | GitHub Copilot |
-|---|---|---|
-| User action feed lại sản phẩm | Prompt, accept/reject edits, repo context, rules | Prompt, completions, PR/code review, repo context, enterprise feedback |
-| Loop compounding? | Có một phần: workflow càng cá nhân hóa càng tốt | Có mạnh hơn nhờ GitHub ecosystem rộng |
-| Feedback systematic? | Có usage dashboard/rules/hooks; chi tiết training không công khai đầy đủ | Có telemetry/product feedback; enterprise privacy tùy plan |
-| Rủi ro | Nếu model nền bị commoditize, Cursor phải giữ UX/agent loop | Nếu AI bị ép vào quá nhiều bề mặt, user có thể thấy intrusive |
-
-Nhận định: Cả hai đều phụ thuộc vào model nền, nên flywheel bền nhất không phải "model thông minh hơn" mà là context + workflow + habit.
-
-### S5.6 Niche Down + AI Feature Map
-
-#### Cursor
-
-- **Niche**: AI-native IDE cho developer muốn code nhanh trong editor.
-- **User Value**: Rất cao với cá nhân/power user.
-- **User Alignment**: Cao nếu user muốn AI chủ động sửa code; thấp hơn nếu team yêu cầu governance chặt.
-- **Business Value**: Cao vì willingness-to-pay $20+ rõ.
-
-#### GitHub Copilot
-
-- **Niche**: AI pair programmer nằm trong GitHub/VS Code/workflow tổ chức.
-- **User Value**: Cao với developer trong repo thật.
-- **User Alignment**: Cao với team dùng GitHub; có rủi ro nếu feature quá intrusive.
-- **Business Value**: Rất cao vì enterprise seat expansion.
-
-### S5.7 Spark → Loop → System
+## 2.1 Luồng người dùng
 
 | Giai đoạn | Cursor | GitHub Copilot |
-|---|---|---|
-| Spark | Cảm giác wow khi chat sinh code/test và apply vào file | Gợi ý inline/chat giúp code nhanh hơn trong tool quen thuộc |
-| Loop | Người dùng quay lại vì editor biến thành pair programmer | Người dùng quay lại vì Copilot gắn vào repo, PR, issue, review |
-| System | Đang xây system qua rules, MCP, cloud agents, team features | Đã gần system hơn nhờ GitHub/Microsoft ecosystem |
+|-----------|--------|----------------|
+| **TRƯỚC khi có AI** | Open browser → Stack Overflow → Copy code → Paste vào IDE → Tự viết unit test → Debug (10–15 phút) | Quy trình tương tự: tìm tài liệu thủ công, viết code và test từ đầu |
+| **TRONG (có AI)** | [1] Gõ prompt vào Chat panel → [2] AI sinh toàn bộ hàm + unit test + giải thích → [3] Nhấn "Apply" để chèn thẳng vào file → [4] Chạy test trong terminal tích hợp | [1] Mở Copilot Chat (VS Code) → [2] AI sinh code và test → [3] Chấp nhận inline suggestion hoặc copy thủ công → [4] Chạy test trong terminal riêng |
+| **SAU khi có AI** | Code chạy được sau khi fix một vài minor issues; tiết kiệm ~10 phút so với trước | Code chạy được sau khi điều chỉnh nhỏ; trải nghiệm tương đương nhưng bước chèn code tốn thêm thao tác |
 
-Dự báo 12 tháng: Cursor cần chứng minh không chỉ là "better UX wrapper" mà là coding operating system. Copilot cần tránh cảm giác ép AI vào mọi nơi và phải giữ chất lượng review/code cao.
+## 2.2 Ba Friction Areas
 
-### S5.8 Liên hệ Lab 1 case Fiverr
+| Friction Type | Cursor | GitHub Copilot |
+|---------------|--------|----------------|
+| **Physical load** (click, copy-paste) | **Thấp** — mọi thứ trong 1 IDE, nút "Apply" chèn code không cần copy | **Trung bình** — inline suggestion tiện, nhưng Copilot Chat yêu cầu copy/paste thủ công |
+| **Cognitive burden** (học prompt?) | **Thấp** — chat bằng ngôn ngữ tự nhiên, không cần biết cú pháp đặc biệt | **Thấp** — tương tự, giao tiếp tự nhiên |
+| **User workarounds** | Phải gõ lệnh chạy test thủ công trong terminal (chưa auto-run) | Phải setup extension + cấu hình context repo nếu lần đầu dùng |
 
-Lab 1 cho thấy Fiverr bị AI ép ở các task freelance đơn giản vì buyer chuyển từ "thuê người làm task" sang "AI làm bản nháp ngay". Cursor và Copilot đang ở phía ngược lại: chính chúng là công cụ thay thế micro-task code trên marketplace.
+## 2.3 Nhận định
 
-Bài học áp dụng:
-
-1. **Không chỉ output, mà workflow mới quyết định thắng**: Cursor thắng vì ở ngay editor; Copilot thắng vì ở ngay GitHub/VS Code.
-2. **Moat phải nằm trong habit/context**: Fiverr mất buyer vì chat interface thay thế search marketplace; Copilot có lợi vì nằm trong repo workflow.
-3. **Task đơn giản sẽ bị commoditize**: cả Cursor và Copilot phải đi lên agentic workflow, repo-scale context và team governance, không chỉ autocomplete.
+Cursor giảm friction tốt hơn nhờ **AI-native workflow**: toàn bộ vòng lặp prompt → sinh code → apply diễn ra trong cùng 1 màn hình. GitHub Copilot vẫn hiệu quả nhưng bị phân tán khi nằm ở nhiều surface (VS Code extension, GitHub web, CLI) — mỗi surface lại có context riêng.
 
 ---
 
-## Nguồn tham khảo cho Lab 2
+# S3 — Output & Trust
+
+## 3.1 Chất lượng output
+
+| Tiêu chí | Cursor | GitHub Copilot |
+|----------|--------|----------------|
+| **Đúng nội dung?** | Có — hàm Levenshtein chuẩn, test case bao phủ đủ trường hợp | Có — output tương đương, logic chính xác |
+| **Có bịa không?** | Không — code chạy được ngay, không có hallucination | Không — code chính xác, không bịa API hay method |
+| **Tiếng Việt tự nhiên?** | Rất tự nhiên — giải thích 8 edge cases đầy đủ bằng tiếng Việt | Phần lớn tiếng Anh; tiếng Việt có nhưng ngắn hơn |
+| **Đầy đủ các phần?** | Đầy đủ: hàm chính + unit test + giải thích edge cases | Đầy đủ: hàm chính + unit test; giải thích edge cases ngắn hơn |
+| **Tốc độ trả lời** | ~5–10 giây | ~5–15 giây |
+
+## 3.2 Sáu tín hiệu đáng tin (Trust Signals)
+
+| Tín hiệu | Cursor | GitHub Copilot |
+|----------|--------|----------------|
+| **Citation** | Không có (code generation không cần citation) | Không có |
+| **Control** (sửa/làm lại) | Có — nút "Apply", "Retry", edit trực tiếp trong IDE | Có — chấp nhận/từ chối inline; Copilot Chat có regenerate |
+| **Confidence indicator** | Không hiển thị | Không hiển thị |
+| **Failure handling** | Giải thích lỗi + đề xuất fix cụ thể khi test fail | Tương tự — gợi ý fix khi có lỗi syntax hoặc logic |
+| **Feedback** (báo lỗi) | Chưa có tính năng báo lỗi tích hợp trực tiếp | Chưa có — phụ thuộc GitHub Issues/Feedback portal |
+| **Handoff to human** | Unit test để tự chứng minh correctness | Unit test + PR review workflow trên GitHub |
+
+## 3.3 Nhận định
+
+Với code generation, **trust không đến từ citation** mà đến từ khả năng **execute và verify bằng unit test**. Cursor tạo cảm giác tin nhanh hơn vì output chạy được ngay trong IDE. GitHub Copilot có trust bền hơn ở môi trường team nhờ tích hợp sâu vào GitHub PR/review workflow.
+
+---
+
+# S4 — Business / Usage Signal
+
+## 4.1 Mô hình giá
+
+| Yếu tố | Cursor | GitHub Copilot |
+|--------|--------|----------------|
+| **Gói miễn phí** | Hobby — giới hạn model và slow requests | Copilot Free — giới hạn completions/chat |
+| **Giá thấp nhất** | $20/tháng (Pro) | $10/tháng (Copilot Pro) |
+| **Mô hình tính phí** | Subscription — unlimited requests trong quota | Subscription — unlimited trong plan |
+| **Quota / limit** | 500 fast requests/tháng (Pro) | Giới hạn tùy plan |
+| **Khi hết quota** | Tự động chuyển sang slow requests; hiện thông báo upgrade | Hiện thông báo upgrade |
+| **Tiers** | Free / Pro ($20) / Pro+ / Ultra | Free / Pro ($10) / Business ($19/user) / Enterprise ($39/user) |
+
+## 4.2 Cost–Capability–Speed
+
+| Sản phẩm | Cost | Capability | Speed | Trade-off chính |
+|----------|------|------------|-------|-----------------|
+| **Cursor** | $20/tháng | Context toàn codebase, multi-file edit, agent mode | Rất nhanh — tiết kiệm ước tính 2–3x | Đắt hơn 2x Copilot, nhưng capability và UX cao hơn rõ rệt |
+| **GitHub Copilot** | $10/tháng | Inline suggestions, Copilot Chat, repo context | Nhanh | Rẻ hơn, phù hợp enterprise; UX ít liền mạch hơn |
+
+## 4.3 Nhận định
+
+Cursor có **pricing power** mạnh ở phân khúc cá nhân: developer sẵn sàng tự bỏ $20/tháng vì giá trị mang lại rõ ràng. GitHub Copilot có **distribution moat** và **enterprise advantage** nhờ bundling với GitHub/Microsoft — dễ được phê duyệt ngân sách công ty hơn.
+
+---
+
+# S5 — Product Judgment
+
+## S5.1 Verdict
+
+| Sản phẩm | Verdict | Lý do |
+|----------|---------|-------|
+| **Cursor** | **STRONG** | AI-native IDE với product moment rõ ràng; workflow mượt mà, willingness-to-pay cao ở individual developer |
+| **GitHub Copilot** | **STRONG** | Distribution và ecosystem mạnh; switching cost cao; phù hợp team/enterprise hơn Cursor |
+
+---
+
+## S5.2 User Base + Tăng trưởng
+
+| Chỉ số | Cursor | GitHub Copilot | Nguồn |
+|--------|--------|----------------|-------|
+| **Paying users** | ~720,000 (ước tính) | 20+ triệu users | Sacra; Microsoft AR 2025 |
+| **ARR** | ~$200M (ước tính) | Không tách rõ | Sacra |
+| **Growth rate** | Hypergrowth 2024–2025 | Steady enterprise adoption | Sacra; Microsoft IR |
+
+**Nhận định:** Cursor tăng trưởng theo mô hình PLG (product-led growth) — cá nhân dùng trước, trả tiền sau. Copilot tăng đều nhờ enterprise bundling và GitHub ecosystem.
+
+---
+
+## S5.3 Doanh thu / Pricing Power
+
+| Chỉ số | Cursor | GitHub Copilot | Nguồn |
+|--------|--------|----------------|-------|
+| **ARR** | ~$200M (ước tính) | Không tách rõ khỏi Microsoft | Sacra |
+| **Giá thấp nhất** | $20/tháng | $10/tháng | Official pricing |
+| **Pricing strategy** | Freemium → Premium cá nhân | Freemium → Enterprise seat |
+| **Tiers** | Free / Pro / Pro+ / Ultra | Free / Pro / Business / Enterprise | Official |
+
+**Nhận định:** Cursor pricing power mạnh ở power users cá nhân — ARPU cao hơn. Copilot mạnh hơn ở enterprise seat expansion — volume lớn, margin ổn định.
+
+---
+
+## S5.4 Moat Phân tích (5 loại)
+
+| Loại Moat | Cursor | GitHub Copilot |
+|-----------|--------|----------------|
+| **Data moat** | Trung bình — interaction trong workspace người dùng | **Cao** — toàn bộ GitHub repo, PR, issue, code review |
+| **Network effect** | Thấp–trung bình | **Cao** — GitHub developer ecosystem |
+| **Switching cost** | Trung bình — import settings từ VS Code dễ | **Cao** — workflow team gắn chặt vào GitHub/CI |
+| **Brand** | Mạnh trong cộng đồng AI-native coding | **Rất mạnh** — GitHub + Microsoft |
+| **Distribution** | Trung bình — PLG, organic | **Rất mạnh** — GitHub/VS Code/enterprise bundling |
+
+**Moat chủ đạo:**
+- **Cursor:** Product moat (UX + agent workflow) — có thể bị copy nếu model bị commoditize
+- **Copilot:** Distribution moat — khó phá hơn, không phụ thuộc vào 1 model duy nhất
+
+---
+
+## S5.5 Data Flywheel + Feedback Loop
+
+| Câu hỏi | Cursor | GitHub Copilot |
+|---------|--------|----------------|
+| **Hành động feed model** | Accept/reject edits, workspace context, custom rules | Completions accepted, PR diffs, code review comments, repo context |
+| **Loop có compounding?** | Có một phần — workflow cá nhân hóa theo thời gian | **Có mạnh hơn** — ecosystem rộng, data đa dạng từ triệu repo |
+| **Feedback systematic?** | Usage dashboard, rules/hooks, `.cursorrules` | Telemetry ẩn, enterprise có privacy controls riêng |
+| **Rủi ro big tech** | Nếu model nền bị commoditize, Cursor phải giữ UX loop | Copilot phụ thuộc Microsoft AI stack — ít tự chủ về model |
+
+**Nhận định:** Flywheel bền nhất không phải "model thông minh hơn" mà là **context + workflow + habit** — ai lock-in được 3 thứ này thắng dài hạn.
+
+---
+
+## S5.6 Niche Down + AI Feature Map
+
+| Chiều | Cursor | GitHub Copilot |
+|-------|--------|----------------|
+| **Niche rõ?** | Có — AI-native IDE cho individual developer muốn tốc độ cao | Có — AI pair programmer tích hợp vào GitHub/VS Code workflow tổ chức |
+| **User Value** | Rất cao với cá nhân / power user | Cao với developer làm việc trong repo thật |
+| **User Alignment** | Cao với individual dev; thấp hơn khi team cần governance | Cao với team dùng GitHub; tích hợp tự nhiên vào review process |
+| **Business Value** | Cao — willingness-to-pay $20+ rõ ràng | Rất cao — enterprise seat expansion, dễ phê duyệt ngân sách |
+
+---
+
+## S5.7 Spark → Loop → System
+
+| Giai đoạn | Cursor | GitHub Copilot |
+|-----------|--------|----------------|
+| **Spark** | Wow đầu tiên khi gõ prompt → AI sinh code + test → nhấn Apply xong ngay | Inline suggestion xuất hiện tự động; Copilot Chat trả lời ngay trong editor |
+| **Loop** | Developer quay lại vì editor đã trở thành pair programmer — không muốn code không có AI | Quay lại vì AI gắn vào repo/PR/issue — AI xuất hiện tự nhiên trong mọi bước workflow |
+| **System** | Đang xây dựng — Cursor Rules, MCP server, cloud agents (chưa hoàn chỉnh) | Gần system hơn — GitHub/Microsoft ecosystem, Copilot Workspace, CLI, mobile |
+
+**Dự báo 12 tháng:**
+- **Cursor** cần chứng minh là "coding OS" thực sự, không chỉ là wrapper thông minh quanh model. Nếu không giữ được UX moat, dễ bị commoditize.
+- **GitHub Copilot** cần tránh cảm giác intrusive khi ép AI vào mọi nơi; rủi ro là developer dùng vì bắt buộc, không phải vì yêu thích.
+
+---
+
+## S5.8 Liên hệ Lab 1 Case (Fiverr)
+
+**Bài học từ Fiverr case áp dụng cho Lab 2:**
+
+1. **Workflow quyết định thắng, không phải output:** Cursor thắng vì ở ngay trong editor; Copilot thắng vì ở ngay trong GitHub workflow — tương tự Fiverr, sản phẩm nào nằm sẵn trong flow của user sẽ giữ được user lâu hơn, dù output có tương đương.
+
+2. **Moat phải nằm trong habit và context:** Fiverr mất buyer khi chat interface thay thế search; Copilot có lợi thế tương tự vì nằm trong repo workflow — user không cần chuyển context, không có lý do để switch.
+
+3. **Task đơn giản sẽ bị commoditize:** Autocomplete cơ bản đã là commodity — cả Cursor và Copilot đều phải đi lên agentic workflow, repo-scale context và team governance để giữ pricing power.
+
+| Sản phẩm | Rủi ro disruption |
+|----------|-------------------|
+| **Cursor** | Rủi ro cao hơn nếu model nền bị commoditize và đối thủ copy được UX moat — moat hiện tại mỏng hơn Copilot |
+| **GitHub Copilot** | Rủi ro thấp hơn nhờ distribution moat + enterprise lock-in; rủi ro chính là bị cảm nhận là "ép AI" thay vì "AI hữu ích" |
+
+---
+
+# Nguồn tham khảo
 
 1. Cursor Pricing — https://cursor.com/pricing
-2. Cursor usage/pricing docs — https://docs.cursor.com/en/account/usage
-3. Sacra, Cursor at $200M ARR — https://sacra.com/research/cursor-at-200m-arr/
-4. GitHub Copilot plans — https://github.com/features/copilot/plans
-5. GitHub Copilot licenses — https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses
-6. Microsoft Annual Report 2025 — https://www.microsoft.com/investor/reports/ar25/index.html
-7. Lab 1 final case Fiverr — `../01-bigtech-disruption/3-FINAL-case-analysis.md`
-
----
-
-## Checklist trước khi export PDF
-
-- [x] Có đủ S1-S5 theo template.
-- [x] Có S5.1, S5.6, S5.7, S5.8.
-- [x] Có phân tích S5.2-S5.5.
-- [x] Có nguồn pricing/user/revenue/moat.
-- [x] Có ảnh Cursor.
-- [ ] Bổ sung ảnh GitHub Copilot thật: entry, input, output.
-- [ ] Chuyển nội dung này thành slide deck và export `analysis-report.pdf`.
+2. Sacra, Cursor at $200M ARR — https://sacra.com/research/cursor-at-200m-arr/
+3. GitHub Copilot Plans — https://github.com/features/copilot/plans
+4. Microsoft Annual Report 2025 — https://www.microsoft.com/investor/reports/ar25/index.html
+5. Lab 1 FINAL case Fiverr — `../01-bigtech-disruption/3-FINAL-case-analysis.md`
